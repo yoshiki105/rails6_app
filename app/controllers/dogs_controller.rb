@@ -36,15 +36,13 @@ class DogsController < ApplicationController
 
   # PATCH/PUT /dogs/1 or /dogs/1.json
   def update
-    do
-      respond_to do |format|
-        if @dog.update(dog_params)
-          format.html { redirect_to dog_url(@dog), notice: "Dog was successfully updated." }
-          format.json { render :show, status: :ok, location: @dog }
-        else
-          format.html { render :edit, status: :unprocessable_entity }
-          format.json { render json: @dog.errors, status: :unprocessable_entity }
-        end
+    respond_to do |format|
+      if @dog.update(dog_params)
+        format.html { redirect_to dog_url(@dog), notice: "Dog was successfully updated." }
+        format.json { render :show, status: :ok, location: @dog }
+      else
+        format.html { render :edit, status: :unprocessable_entity }
+        format.json { render json: @dog.errors, status: :unprocessable_entity }
       end
     end
   end

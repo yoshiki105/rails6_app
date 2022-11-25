@@ -3,7 +3,7 @@ ARG APP_NAME=rails6_app
 #使いたいrubyのimage名に置き換えてください
 ARG RUBY_IMAGE=ruby:3.1.2
 #使いたいnodeのversionに置き換えてください
-ARG NODE_VERSION='15.14.0'
+ARG NODE_VERSION=15.14.0
 #インストールするbundlerのversionに置き換えてください
 ARG BUNDLER_VERSION=2.3.17
 
